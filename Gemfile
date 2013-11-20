@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0'
-gem 'bootstrap-sass'
+gem 'rails', '4.0.1'
+gem 'bootstrap-sass', '2.3.2.0'
 
 # Use postgresql as the database for Active Record
 gem 'pg'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+gem 'sass-rails'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -28,6 +28,8 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
+gem 'simple_form'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
@@ -39,7 +41,7 @@ end
 
 # Testing
 group :test do
-	gem 'spork'
+	gem 'spork-rails'
 	gem 'capybara', '2.1.0'
 end
 
@@ -47,7 +49,6 @@ group :development do
 	gem 'faker'
 	gem 'factory_girl'
 	gem 'annotate'
-	gem 'simple_form'
 end
 
 # Use ActiveModel has_secure_password

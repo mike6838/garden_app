@@ -18,9 +18,10 @@ development:
   adapter: postgresql
   encoding: unicode
   database: garden_app_development
+  host: localhost
   pool: 5
-  username: garden_app
-  password:
+  username: postgres
+  password: teevan88
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -47,14 +48,9 @@ test:
   adapter: postgresql
   encoding: unicode
   database: garden_app_test
+  host: localhost
   pool: 5
-  username: garden_app
-  password:
+  username: postgres
+  password: teevan88
 
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: garden_app_production
-  pool: 5
-  username: garden_app
-  password:
+
