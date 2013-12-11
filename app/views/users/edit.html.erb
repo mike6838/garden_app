@@ -1,0 +1,17 @@
+<% provide(:title, @user.username) %>
+<h1>Update Profile</h1>
+
+<%= simple_form_for @user do |f| %>
+	<%= f.error_notification %>
+	<%= f.input :username, disabled: true, label: "Username", placeholder: @user.username %>
+	<%= f.input :password %>
+	<% if @user.name_first? %>
+		<%= f.input :name_first, label: "First Name", placeholder: @user.name_first %>
+	<% else %>
+		<%= f.input :name_first, label: "First Name", placeholder: "Optional" %>
+	<% end %>
+
+	<%= f.input :name_last, label: "Last Name", placeholder: "Optional" %>
+	<%= f.input :zipcode, label: "Zipcode", placeholder: "Optional" %>
+	<%= f.button :submit %>
+<% end %>

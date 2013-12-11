@@ -29,6 +29,7 @@ GEM
       rake
     arel (4.0.1)
     atomic (1.1.14)
+    bcrypt-ruby (3.1.2)
     bootstrap-sass (2.3.2.0)
       sass (~> 3.2)
     builder (3.1.4)
@@ -50,6 +51,9 @@ GEM
     execjs (2.0.2)
     factory_girl (4.3.0)
       activesupport (>= 3.0.0)
+    factory_girl_rails (4.3.0)
+      factory_girl (~> 4.3.0)
+      railties (>= 3.0.0)
     faker (1.2.0)
       i18n (~> 0.5)
     hike (1.2.3)
@@ -64,7 +68,7 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.25)
+    mime-types (1.25.1)
     mini_portile (0.5.2)
     minitest (4.7.5)
     multi_json (1.8.2)
@@ -117,7 +121,7 @@ GEM
     spork-rails (4.0.0)
       rails (>= 3.0.0, < 5)
       spork (>= 1.0rc0)
-    sprockets (2.10.0)
+    sprockets (2.10.1)
       hike (~> 1.2)
       multi_json (~> 1.0)
       rack (~> 1.0)
@@ -147,10 +151,11 @@ PLATFORMS
 
 DEPENDENCIES
   annotate
+  bcrypt-ruby (= 3.1.2)
   bootstrap-sass (= 2.3.2.0)
   capybara (= 2.1.0)
   coffee-rails (~> 4.0.0)
-  factory_girl
+  factory_girl_rails
   faker
   jbuilder (~> 1.2)
   jquery-rails

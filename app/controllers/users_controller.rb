@@ -7,16 +7,26 @@ class UsersController < ApplicationController
 	def create
 		@user = User.new(user_params)
 		if @user.save
-		# Handle a successful save.
+			flash[:success] = "Welcome to Garden_App @_@"
+			redirect_to @user
 		else
-		render 'new'
+			render 'new'
 		end
 	end
 
-  private
+	def edit
+		@user = User.find(params[:id])
+	end
 
-    def user_params
-      params.require(:user).permit(:username)
-    end
+	def show
+		@user = User.find(params[:id])
+	end
+
+		  private
+
+		    def user_params
+		      params.require(:user).permit(:username, :email, :name_last,
+		      								:name_first, :zipcode)
+		    end
 
 end
